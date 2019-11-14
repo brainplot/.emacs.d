@@ -1,0 +1,7 @@
+(global-set-key (kbd "<f8>") 'speedbar)
+(global-set-key (kbd "<f9>") 'sort-lines)
+(global-set-key (kbd "C-c d") 'copy-from-above-command)
+(global-set-key (kbd "C-c p") 'project-find-file)
+(global-set-key (kbd "C-c w") 'whitespace-mode)
+(global-set-key (kbd "C-x C-S-s") 'save-some-buffers)
+(global-set-key (kbd "C-x C-b") 'ibuffer-other-window)

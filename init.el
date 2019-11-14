@@ -1,0 +1,40 @@
+;; Backups
+(setq backup-directory-alist '(("." . "~/.emacs.d/saves"))
+      backup-by-copying t   ; Copy all files, don't rename them.
+      delete-old-versions t ; Don't ask to delete excess backup versions.
+      kept-new-versions 10  ; Number of newest versions to keep.
+      kept-old-versions 0   ; Number of oldest versions to keep.
+      version-control t)    ; Use version numbers for backups.
+
+;; Modes
+(blink-cursor-mode -1)
+(column-number-mode t)
+(global-display-line-numbers-mode t)
+(ido-mode 1)
+(line-number-mode t)
+(menu-bar-mode -1)
+(show-paren-mode)
+(tool-bar-mode -1)
+(windmove-default-keybindings) ; Switch between windows with S-<arrow-key>
+
+;; General options
+(add-to-list 'default-frame-alist
+             '(font . "Hack-13"))
+
+(setq custom-file "~/.emacs.d/custom.el"
+      gc-cons-threshold 20000000
+      ido-enable-flex-matching t
+      inhibit-startup-screen t
+      require-final-newline t
+      scroll-conservatively most-positive-fixnum
+      use-package-always-ensure t)
+
+(setq-default cursor-in-non-selected-windows nil
+              cursor-type 'bar
+              tab-width 4)
+
+(load custom-file)
+(load "~/.emacs.d/melpa" nil t)
+(load "~/.emacs.d/hooks" nil t)
+(load "~/.emacs.d/packages" nil t)
+(load "~/.emacs.d/shortcuts" nil t)
