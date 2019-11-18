@@ -32,7 +32,11 @@
 
 (setq-default cursor-in-non-selected-windows nil
               cursor-type 'bar
+              indent-tabs-mode t
               tab-width 4)
+
+(defvaralias 'c-basic-offset 'tab-width)
+(defvaralias 'cperl-indent-level 'tab-width)
 
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
