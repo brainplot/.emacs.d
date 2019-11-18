@@ -8,8 +8,8 @@
       version-control t)    ; Use version numbers for backups.
 
 ;; Modes
-(blink-cursor-mode -1)
 (column-number-mode t)
+(delete-selection-mode t)
 (global-display-line-numbers-mode t)
 (ido-mode 1)
 (line-number-mode t)
