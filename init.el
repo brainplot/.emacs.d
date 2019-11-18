@@ -1,5 +1,6 @@
 ;; Backups
-(setq backup-directory-alist '(("." . "~/.emacs.d/saves"))
+(setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
+      backup-directory-alist `((".*" . ,temporary-file-directory))
       backup-by-copying t   ; Copy all files, don't rename them.
       delete-old-versions t ; Don't ask to delete excess backup versions.
       kept-new-versions 10  ; Number of newest versions to keep.
