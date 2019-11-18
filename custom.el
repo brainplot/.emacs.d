@@ -5,10 +5,10 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-	(cmake-mode kaolin-themes company eglot rainbow-delimiters use-package)))
+    (magit cmake-mode kaolin-themes company eglot rainbow-delimiters use-package)))
  '(safe-local-variable-values
    (quote
-	((eval setenv "CLANGD_FLAGS" "--compile-commands-dir=build")))))
+    ((eval setenv "CLANGD_FLAGS" "--compile-commands-dir=build")))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
