@@ -34,6 +34,11 @@
               cursor-type 'bar
               tab-width 4)
 
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+
 (load custom-file)
 (load "~/.emacs.d/melpa" nil t)
 (load "~/.emacs.d/hooks" nil t)
