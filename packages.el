@@ -14,10 +14,6 @@
                            "--pch-storage=memory"
                            "-j=6"))))
 
-(use-package company
-  :config
-  (define-key company-active-map [tab] 'company-complete))
-
 (use-package magit
   :bind
   (("C-x g" . magit-status)))

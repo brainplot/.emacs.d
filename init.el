@@ -28,6 +28,7 @@
       inhibit-startup-screen t
       require-final-newline t
       scroll-conservatively most-positive-fixnum
+      tab-always-indent 'complete
       use-package-always-ensure t)
 
 (setq-default cursor-in-non-selected-windows nil
