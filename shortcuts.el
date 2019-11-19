@@ -1,3 +1,4 @@
+(global-set-key (kbd "<f4>") 'kill-this-buffer)
 (global-set-key (kbd "<f8>") 'speedbar)
 (global-set-key (kbd "<f9>") 'sort-lines)
 (global-set-key (kbd "C-c d") 'copy-from-above-command)
