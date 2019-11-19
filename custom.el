@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (magit cmake-mode kaolin-themes company eglot rainbow-delimiters use-package)))
+    (atom-one-dark-theme magit cmake-mode company eglot rainbow-delimiters use-package)))
  '(safe-local-variable-values
    (quote
     ((eval setenv "CLANGD_FLAGS" "--compile-commands-dir=build")))))

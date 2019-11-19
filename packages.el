@@ -1,9 +1,9 @@
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
-(use-package kaolin-themes
+(use-package atom-one-dark-theme
   :config
-  (load-theme 'kaolin-galaxy t))
+  (load-theme 'atom-one-dark t))
 
 (use-package eglot
   :config
