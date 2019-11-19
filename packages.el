@@ -15,5 +15,7 @@
                            "-j=6"))))
 
 (use-package magit
+  :init
+  (require 'git-commit)
   :bind
   (("C-x g" . magit-status)))
