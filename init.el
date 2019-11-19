@@ -19,8 +19,7 @@
 (windmove-default-keybindings) ; Switch between windows with S-<arrow-key>
 
 ;; General options
-(add-to-list 'default-frame-alist
-             '(font . "Hack-13"))
+(push '(font . "Hack-13") default-frame-alist)
 
 (setq custom-file "~/.emacs.d/custom.el"
       gc-cons-threshold 20000000
