@@ -16,7 +16,7 @@
 (menu-bar-mode -1)
 (show-paren-mode)
 (tool-bar-mode -1)
-(windmove-default-keybindings) ; Switch between windows with S-<arrow-key>
+(windmove-default-keybindings 'meta) ; Switch between windows with M-<arrow-key>
 
 ;; General options
 (push '(font . "Hack-13") default-frame-alist)
