@@ -10,6 +10,7 @@
 ;; Modes
 (column-number-mode t)
 (delete-selection-mode t)
+(electric-pair-mode)
 (global-display-line-numbers-mode t)
 (ido-mode 1)
 (line-number-mode t)
