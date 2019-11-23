@@ -19,3 +19,7 @@
   (require 'git-commit)
   :bind
   (("C-x g" . magit-status)))
+
+(use-package company
+  :config
+  (define-key company-active-map [tab] 'company-complete-selection))
