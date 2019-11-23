@@ -22,4 +22,15 @@
 
 (use-package company
   :config
-  (define-key company-active-map [tab] 'company-complete-selection))
+  (global-company-mode)
+  (setq company-idle-delay 0.25)
+  (setq company-minimum-prefix-length 2)
+  (define-key company-active-map (kbd "M-n") nil)
+  (define-key company-active-map (kbd "M-p") nil)
+  (define-key company-active-map (kbd "<up>") (lambda () (interactive) (company-complete-common-or-cycle -1)))
+  (define-key company-active-map (kbd "<down>") (lambda () (interactive) (company-complete-common-or-cycle 1)))
+  (define-key company-active-map [tab] #'company-complete-selection))
+
+(use-package yasnippet
+  :config (yas-reload-all)
+  :hook (prog-mode . yas-minor-mode))
