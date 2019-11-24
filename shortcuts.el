@@ -8,5 +8,6 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "M-<next>") 'next-buffer)
 (global-set-key (kbd "M-<prior>") 'previous-buffer)
+(global-set-key (kbd "C-c /") 'comment-or-uncomment-region)
 
 (global-set-key (kbd "C-<tab>") 'company-complete)
