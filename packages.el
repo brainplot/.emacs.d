@@ -10,7 +10,8 @@
   (add-to-list 'eglot-server-programs
                '(c++-mode . ("clangd"
                              "--background-index"
-                             "--header-insertion=iwyu"
+                             "--compile-commands-dir=build"
+                             "--header-insertion=never"
                              "--pch-storage=memory"
                              "-j=6"))))
 
