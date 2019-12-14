@@ -1,9 +1,9 @@
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
-(use-package atom-one-dark-theme
+(use-package modus-vivendi-theme
   :config
-  (load-theme 'atom-one-dark t))
+  (load-theme 'modus-vivendi t))
 
 (use-package eglot
   :config
