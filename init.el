@@ -10,6 +10,7 @@
 (load custom-file)
 (load "~/.emacs.d/melpa" nil t)
 (load "~/.emacs.d/hooks" nil t)
+(load "~/.emacs.d/functions" nil t)
 (load "~/.emacs.d/packages" nil t)
 (load "~/.emacs.d/shortcuts" nil t)
 
