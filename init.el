@@ -26,7 +26,6 @@
 (column-number-mode t)
 (delete-selection-mode t)
 (electric-pair-mode)
-(global-display-line-numbers-mode t)
 (ido-mode 1)
 (line-number-mode t)
 (menu-bar-mode -1)
@@ -39,6 +38,7 @@
 
 (setq-default cursor-in-non-selected-windows nil
               cursor-type 'bar
+              display-line-numbers 'relative
               indent-tabs-mode t
               tab-width 4)
 
