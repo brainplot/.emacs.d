@@ -32,12 +32,6 @@
   (define-key company-active-map (kbd "<down>") (lambda () (interactive) (company-complete-common-or-cycle 1)))
   (define-key company-active-map [tab] #'company-complete-selection))
 
-(use-package company-quickhelp
-  :after (company)
-  :config
-  (define-key company-active-map (kbd "C-c h") #'company-quickhelp-manual-begin)
-  (company-quickhelp-mode))
-
 (use-package yasnippet
   :config (yas-reload-all)
   :hook (prog-mode . yas-minor-mode))
