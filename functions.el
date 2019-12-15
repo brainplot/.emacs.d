@@ -12,3 +12,10 @@
   (open-line arg)
   (next-line 1)
   (indent-according-to-mode))
+
+(defun company-yasnippet-or-completion ()
+  "Better integration between yasnippet and company"
+  (interactive)
+  (let ((yas-fallback-behavior nil))
+    (unless (yas-expand)
+      (call-interactively #'company-complete-common))))
