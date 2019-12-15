@@ -1,6 +1,5 @@
 (setq custom-file "~/.emacs.d/custom.el"
       gc-cons-threshold 20000000
-      ido-enable-flex-matching t
       inhibit-startup-screen t
       require-final-newline t
       scroll-conservatively most-positive-fixnum
@@ -27,7 +26,6 @@
 (column-number-mode t)
 (delete-selection-mode t)
 (electric-pair-mode)
-(ido-mode 1)
 (line-number-mode t)
 (menu-bar-mode -1)
 (show-paren-mode)
