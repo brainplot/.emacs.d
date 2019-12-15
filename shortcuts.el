@@ -10,6 +10,5 @@
 (global-set-key (kbd "M-<prior>") 'previous-buffer)
 (global-set-key (kbd "C-c /") 'comment-or-uncomment-region)
 ;; Custom keybindings
-(global-set-key (kbd "C-<tab>") 'company-complete)
-(global-set-key [C-return] 'open-next-line)
-(global-set-key [C-S-return] 'open-previous-line)
+(global-set-key (kbd "<C-return>") 'open-next-line)
+(global-set-key (kbd "<C-S-return>") 'open-previous-line)
