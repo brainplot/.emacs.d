@@ -38,9 +38,7 @@
 ;; General options
 (push '(font . "Hack-13") default-frame-alist)
 
-(setq-default cursor-in-non-selected-windows nil
-              cursor-type 'bar
-              display-line-numbers 'relative
+(setq-default display-line-numbers 'relative
               indent-tabs-mode t
               tab-width 4)
 
