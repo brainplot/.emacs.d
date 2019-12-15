@@ -22,15 +22,15 @@
   (("C-x g" . magit-status)))
 
 (use-package company
+  :custom
+  (company-idle-delay 0.2)
+  (company-minimum-prefix-length 2)
   :config
-  (global-company-mode)
-  (setq company-idle-delay 0.25)
-  (setq company-minimum-prefix-length 2)
-  (define-key company-active-map (kbd "M-n") nil)
-  (define-key company-active-map (kbd "M-p") nil)
-  (define-key company-active-map (kbd "<up>") (lambda () (interactive) (company-complete-common-or-cycle -1)))
-  (define-key company-active-map (kbd "<down>") (lambda () (interactive) (company-complete-common-or-cycle 1)))
-  (define-key company-active-map [tab] #'company-complete-selection))
+  (global-set-key (kbd "C-<tab>") 'company-complete)
+  (define-key company-active-map (kbd "M-p") (lambda () (interactive) (company-complete-common-or-cycle -1)))
+  (define-key company-active-map (kbd "M-n") (lambda () (interactive) (company-complete-common-or-cycle 1)))
+  (define-key company-active-map (kbd "<tab>") 'company-complete-selection)
+  (global-company-mode))
 
 (use-package yasnippet
   :config (yas-reload-all)
