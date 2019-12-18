@@ -2,6 +2,9 @@
   :hook (prog-mode . rainbow-delimiters-mode))
 
 (use-package modus-vivendi-theme
+  :init
+  (setq modus-vivendi-theme-slanted-constructs t)
+  (setq modus-vivendi-theme-scale-headings t)
   :config
   (load-theme 'modus-vivendi t))
 
