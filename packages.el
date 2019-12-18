@@ -115,3 +115,14 @@
               ("Y"   . mc/mark-previous-symbol-like-this)
               ("w"   . mc/mark-next-word-like-this)
               ("W"   . mc/mark-previous-word-like-this)))
+
+(use-package expand-region
+  :bind ("C-=" . er/expand-region))
+
+(use-package elcord
+  :config (elcord-mode))
+
+(use-package ace-window
+  :custom
+  (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
+  :bind ("M-o" . ace-window))
