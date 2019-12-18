@@ -9,6 +9,7 @@
   (load-theme 'modus-vivendi t))
 
 (use-package eglot
+  :bind ("C-c l" . eglot)
   :config
   (add-to-list 'eglot-server-programs
                '(c++-mode . ("clangd"
