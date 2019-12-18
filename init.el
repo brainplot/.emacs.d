@@ -30,8 +30,6 @@
 (menu-bar-mode -1)
 (show-paren-mode)
 (tool-bar-mode -1)
-(windmove-default-keybindings 'meta) ; Switch between windows with M-<arrow-key>
-(window-divider-mode)
 
 ;; General options
 (push '(font . "Hack-13") default-frame-alist)
