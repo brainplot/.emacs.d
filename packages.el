@@ -9,7 +9,8 @@
   (load-theme 'modus-vivendi t))
 
 (use-package eglot
-  :bind ("C-c l" . eglot)
+  :bind (("C-c l" . eglot)
+         ("C-c f" . eglot-format))
   :config
   (add-to-list 'eglot-server-programs
                '(c++-mode . ("clangd"
