@@ -45,3 +45,6 @@
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
+
+;; Modes for custom file extensions
+(push '("\\.bash_aliases\\'" . shell-script-mode) auto-mode-alist)
