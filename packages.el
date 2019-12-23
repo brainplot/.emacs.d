@@ -103,20 +103,7 @@
          ("C-c m {"     . mc/vertical-align)
 
          ("S-<down-mouse-1>")
-         ("S-<mouse-1>" . mc/add-cursor-on-click))
-
-  :bind (:map selected-keymap
-              ("c"   . mc/edit-lines)
-              ("."   . mc/mark-next-like-this)
-              ("<"   . mc/unmark-next-like-this)
-              ("C->" . mc/skip-to-next-like-this)
-              (","   . mc/mark-previous-like-this)
-              (">"   . mc/unmark-previous-like-this)
-              ("C-<" . mc/skip-to-previous-like-this)
-              ("y"   . mc/mark-next-symbol-like-this)
-              ("Y"   . mc/mark-previous-symbol-like-this)
-              ("w"   . mc/mark-next-word-like-this)
-              ("W"   . mc/mark-previous-word-like-this)))
+         ("S-<mouse-1>" . mc/add-cursor-on-click)))
 
 (use-package expand-region
   :bind ("C-=" . er/expand-region))
