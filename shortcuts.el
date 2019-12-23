@@ -2,7 +2,7 @@
 (global-set-key (kbd "<f8>") 'speedbar)
 (global-set-key (kbd "<f9>") 'sort-lines)
 (global-set-key (kbd "C-c /") 'comment-or-uncomment-region)
-(global-set-key (kbd "C-c k") 'kill-this-buffer)
+(global-set-key (kbd "C-c q") 'kill-this-buffer)
 (global-set-key (kbd "C-c p") 'project-find-file)
 (global-set-key (kbd "C-c r") 'revert-buffer)
 (global-set-key (kbd "C-c s") 'save-some-buffers)
