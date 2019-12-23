@@ -38,13 +38,13 @@
   (global-company-mode))
 
 (use-package yasnippet
-  :demand
   :bind (:map yas-minor-mode-map
               ("TAB" . nil)
               ("<tab>" . nil)
               ("C-<tab>" . yas-expand))
+  :hook (prog-mode . yas-minor-mode)
   :config
-  (yas-global-mode 1))
+  (yas-reload-all))
 
 (use-package ivy
   :demand
@@ -154,7 +154,6 @@
   :custom
   (emmet-move-cursor-between-quotes t)
   :bind (:map emmet-mode-keymap
-              ("C-<tab>" . emmet-expand-line)
               ("<backtab>" . emmet-prev-edit-point)
               ("<tab>" . emmet-next-edit-point))
   :hook (sgml-mode css-mode js-jsx-mode))
