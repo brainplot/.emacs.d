@@ -18,8 +18,7 @@
                              "--compile-commands-dir=build"
                              "--header-insertion=never"
                              "--pch-storage=memory"
-                             "-j=6")))
-  :hook (before-save . (lambda () (when (eglot--managed-mode) (eglot-format-buffer)))))
+                             "-j=6"))))
 
 (use-package magit
   :init

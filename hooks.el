@@ -1,6 +1,8 @@
 (add-hook 'before-save-hook
           (lambda()
-            (delete-trailing-whitespace)))
+            (delete-trailing-whitespace)
+            (when (eglot-current-server)
+              (eglot-format-buffer))))
 
 (add-hook 'emacs-lisp-mode-hook
           (lambda()
