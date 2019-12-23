@@ -142,6 +142,6 @@
   :custom
   (emmet-move-cursor-between-quotes t)
   :bind (:map emmet-mode-keymap
-              ("<backtab>" . emmet-prev-edit-point)
-              ("<tab>" . emmet-next-edit-point))
-  :hook (sgml-mode css-mode js-jsx-mode))
+              ("M-p" . emmet-prev-edit-point)
+              ("M-n" . emmet-next-edit-point))
+  :hook (sgml-mode css-mode js-jsx-mode web-mode))
