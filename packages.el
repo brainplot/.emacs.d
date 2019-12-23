@@ -149,3 +149,12 @@
          ("\\.djhtml\\'" . web-mode))
   :hook (web-mode . (lambda ()
                       (setq indent-tabs-mode nil))))
+
+(use-package emmet-mode
+  :custom
+  (emmet-move-cursor-between-quotes t)
+  :bind (:map emmet-mode-keymap
+              ("C-<tab>" . emmet-expand-line)
+              ("<backtab>" . emmet-prev-edit-point)
+              ("<tab>" . emmet-next-edit-point))
+  :hook (sgml-mode css-mode js-jsx-mode))
