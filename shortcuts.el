@@ -8,8 +8,8 @@
 (global-set-key (kbd "C-c s") 'save-some-buffers)
 (global-set-key (kbd "C-c w") 'whitespace-mode)
 (global-set-key (kbd "C-x C-b") 'ibuffer)
-(global-set-key (kbd "M-<next>") 'next-buffer)
-(global-set-key (kbd "M-<prior>") 'previous-buffer)
+(global-set-key (kbd "M-N") 'next-buffer)
+(global-set-key (kbd "M-P") 'previous-buffer)
 (global-set-key (kbd "M-Z") 'zap-up-to-char)
 
 ;; Custom keybindings
