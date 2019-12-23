@@ -131,3 +131,6 @@
   :mode (("README\\.md\\'" . gfm-mode)
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)))
+
+(use-package pinentry
+  :config (pinentry-start))

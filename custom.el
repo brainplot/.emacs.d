@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-	(markdown-mode expand-region ace-window multiple-cursors counsel modus-vivendi-theme yasnippet-snippets yasnippet rust-mode fish-mode magit cmake-mode company eglot rainbow-delimiters use-package)))
+	(pinentry markdown-mode expand-region ace-window multiple-cursors counsel modus-vivendi-theme yasnippet-snippets yasnippet rust-mode fish-mode magit cmake-mode company eglot rainbow-delimiters use-package)))
  '(safe-local-variable-values
    (quote
 	((eval setenv "CLANGD_FLAGS" "--compile-commands-dir=build")))))
