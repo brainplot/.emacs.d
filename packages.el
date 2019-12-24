@@ -44,10 +44,6 @@
   (global-company-mode))
 
 (use-package yasnippet
-  :bind (:map yas-minor-mode-map
-              ("TAB" . nil)
-              ("<tab>" . nil)
-              ("C-<tab>" . yas-expand))
   :hook (prog-mode . yas-minor-mode)
   :config
   (yas-reload-all))
