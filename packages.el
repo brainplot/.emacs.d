@@ -10,6 +10,7 @@
 
 (use-package eglot
   :bind (("C-c l" . eglot)
+         :map eglot-mode-map
          ("C-c f" . eglot-format))
   :config
   (add-to-list 'eglot-stay-out-of 'company)
