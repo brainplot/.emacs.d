@@ -12,6 +12,7 @@
   :bind (("C-c l" . eglot)
          ("C-c f" . eglot-format))
   :config
+  (add-to-list 'eglot-stay-out-of 'company)
   (add-to-list 'eglot-server-programs
                '(c++-mode . ("clangd"
                              "--background-index"
