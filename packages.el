@@ -33,6 +33,12 @@
   :custom
   (company-idle-delay 0.2)
   (company-minimum-prefix-length 2)
+  (company-backends '((company-capf :with company-yasnippet)
+                      company-semantic
+                      company-cmake
+                      company-files
+                      company-dabbrev
+                      (company-dabbrev-code company-keywords)))
   :config
   (global-company-mode))
 
