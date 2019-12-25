@@ -31,6 +31,8 @@
 (use-package company
   :demand
   :bind (:map company-active-map
+              ("RET")
+              ("<return>")
               ("<tab>" . company-complete-selection))
   :custom
   (company-idle-delay 0.2)
