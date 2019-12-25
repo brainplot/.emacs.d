@@ -1,12 +1,9 @@
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
-(use-package modus-vivendi-theme
-  :init
-  (setq modus-vivendi-theme-slanted-constructs t)
-  (setq modus-vivendi-theme-scale-headings t)
+(use-package kaolin-themes
   :config
-  (load-theme 'modus-vivendi t))
+  (load-theme 'kaolin-ocean t))
 
 (use-package eglot
   :bind (("C-c l" . eglot)
