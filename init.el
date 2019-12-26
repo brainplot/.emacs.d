@@ -6,12 +6,14 @@
       tab-always-indent 'complete
       use-package-always-ensure t)
 
+(add-to-list 'load-path "~/.emacs.d/lisp")
+
 (load custom-file)
-(load "~/.emacs.d/melpa" nil t)
-(load "~/.emacs.d/hooks" nil t)
-(load "~/.emacs.d/functions" nil t)
-(load "~/.emacs.d/packages" nil t)
-(load "~/.emacs.d/shortcuts" nil t)
+(load "melpa" nil t)
+(load "hooks" nil t)
+(load "functions" nil t)
+(load "packages" nil t)
+(load "shortcuts" nil t)
 
 ;; Backups
 (setq auto-save-file-name-transforms `((".*" ,temporary-file-directory t))
