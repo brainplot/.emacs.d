@@ -1,5 +1,6 @@
 (setq custom-file "~/.emacs.d/custom.el"
-      gc-cons-threshold 20000000
+      gc-cons-threshold 1048576
+      gc-cons-percentage 0.25
       inhibit-startup-screen t
       require-final-newline t
       scroll-conservatively most-positive-fixnum
