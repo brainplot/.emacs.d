@@ -3,9 +3,11 @@
       gc-cons-percentage 0.25
       inhibit-startup-screen t
       require-final-newline t
-      scroll-conservatively most-positive-fixnum
       tab-always-indent 'complete
       use-package-always-ensure t)
+
+;; (unless (or (eq system-type 'ms-dos) (eq system-type 'windows-nt))
+;;   (setq scroll-conservatively most-positive-fixnum))
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
