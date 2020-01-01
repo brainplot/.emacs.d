@@ -30,6 +30,8 @@
   :bind (:map company-active-map
               ("RET")
               ("<return>")
+              ("M-p" . (lambda () (interactive) (company-complete-common-or-cycle -1)))
+              ("M-n" . (lambda () (interactive) (company-complete-common-or-cycle)))
               ("<tab>" . company-complete-selection))
   :custom
   (company-idle-delay 0.2)
