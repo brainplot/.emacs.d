@@ -42,8 +42,7 @@
                       company-dabbrev
                       company-cmake
                       (company-dabbrev-code company-keywords)))
-  :config
-  (global-company-mode))
+  :hook (after-init . global-company-mode))
 
 (use-package yasnippet
   :hook (prog-mode . yas-minor-mode)
