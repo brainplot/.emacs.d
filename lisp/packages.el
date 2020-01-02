@@ -24,8 +24,8 @@
 (use-package magit
   :init
   (require 'git-commit)
-  :bind
-  (("C-x g" . magit-status)))
+  :bind (("C-x g" . magit-status)
+         ("C-c g" . magit-file-dispatch)))
 
 (use-package company
   :demand
