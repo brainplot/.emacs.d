@@ -151,3 +151,6 @@
               ("C-M-p" . emmet-prev-edit-point)
               ("C-M-n" . emmet-next-edit-point))
   :hook (sgml-mode css-mode js-jsx-mode web-mode))
+
+(use-package powershell
+  :defer t)
