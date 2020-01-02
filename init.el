@@ -3,8 +3,7 @@
       gc-cons-percentage 0.25
       inhibit-startup-screen t
       require-final-newline t
-      tab-always-indent 'complete
-      use-package-always-ensure t)
+      tab-always-indent 'complete)
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
