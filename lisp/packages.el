@@ -21,9 +21,9 @@
                              "--pch-storage=memory"
                              "-j=6"))))
 
+(use-package git-commit)
+
 (use-package magit
-  :init
-  (require 'git-commit)
   :bind (("C-x g" . magit-status)
          ("C-c g" . magit-file-dispatch)))
 
