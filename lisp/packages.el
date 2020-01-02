@@ -122,9 +122,9 @@
          ("\\.md\\'" . markdown-mode)
          ("\\.markdown\\'" . markdown-mode)))
 
-(unless (or (eq system-type 'ms-dos) (eq system-type 'windows-nt))
-  (use-package pinentry
-    :config (pinentry-start)))
+(use-package pinentry
+  :if (not (or (eq system-type 'ms-dos) (eq system-type 'windows-nt)))
+  :config (pinentry-start))
 
 (use-package web-mode
   :custom
