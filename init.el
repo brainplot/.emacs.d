@@ -1,3 +1,8 @@
+;; Set window title
+(setq frame-title-format
+      '("[" (:eval (user-login-name)) "@" (:eval (system-name)) "] " (:eval (if buffer-file-name
+                                                                                (abbreviate-file-name buffer-file-name) "%b"))))
+
 (setq custom-file "~/.emacs.d/custom.el"
       gc-cons-threshold 1048576
       gc-cons-percentage 0.25
