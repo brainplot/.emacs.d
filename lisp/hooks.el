@@ -27,3 +27,7 @@
 (add-hook 'js-jsx-mode-hook
           (lambda ()
             (setq indent-tabs-mode nil)))
+
+(add-hook 'cmake-mode-hook
+          (lambda ()
+            (setq indent-tabs-mode nil)))
