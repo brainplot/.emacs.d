@@ -12,3 +12,13 @@
   (open-line arg)
   (next-line 1)
   (indent-according-to-mode))
+
+(defun clean-up-buffer ()
+  "Perform some clean up operations in the current buffer"
+  (if (and (fboundp #'eglot-current-server) (eglot-current-server))
+      (eglot-format-buffer)
+    (whitespace-cleanup)))
+
+(defun indent-with-spaces ()
+  "Set indentation for the current buffer to spaces"
+  (setq indent-tabs-mode nil))

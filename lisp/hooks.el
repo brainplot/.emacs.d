@@ -1,33 +1,6 @@
-(add-hook 'before-save-hook
-          (lambda()
-            (delete-trailing-whitespace)
-            (when (eglot-current-server)
-              (eglot-format-buffer))))
+(add-hook 'before-save-hook 'clean-up-buffer)
 
-(add-hook 'emacs-lisp-mode-hook
-          (lambda()
-            (setq indent-tabs-mode nil)))
+(setq indent-spaces-list '(emacs-lisp sgml css js js-jsx))
 
-(add-hook 'rust-mode-hook
-          (lambda ()
-            (setq indent-tabs-mode nil)))
-
-(add-hook 'sgml-mode-hook
-          (lambda ()
-            (setq indent-tabs-mode nil)))
-
-(add-hook 'css-mode-hook
-          (lambda ()
-            (setq indent-tabs-mode nil)))
-
-(add-hook 'js-mode-hook
-          (lambda ()
-            (setq indent-tabs-mode nil)))
-
-(add-hook 'js-jsx-mode-hook
-          (lambda ()
-            (setq indent-tabs-mode nil)))
-
-(add-hook 'cmake-mode-hook
-          (lambda ()
-            (setq indent-tabs-mode nil)))
+(dolist (mode indent-spaces-list)
+  (add-hook (intern (concat (symbol-name mode) "-mode-hook")) 'indent-with-spaces))

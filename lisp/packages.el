@@ -141,8 +141,13 @@
          ("\\.html\\'" . web-mode)
          ("\\.mustache\\'" . web-mode)
          ("\\.djhtml\\'" . web-mode))
-  :hook (web-mode . (lambda ()
-                      (setq indent-tabs-mode nil))))
+  :hook indent-with-spaces)
+
+(use-package cmake-mode
+  :hook indent-with-spaces)
+
+(use-package rust-mode
+  :hook indent-with-spaces)
 
 (use-package emmet-mode
   :custom
