@@ -156,3 +156,6 @@
 
 (use-package powershell
   :defer t)
+
+(use-package yaml-mode
+  :mode ("\\.clang-format\\'"))
