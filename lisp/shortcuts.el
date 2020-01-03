@@ -12,6 +12,6 @@
 (global-set-key (kbd "M-P") 'previous-buffer)
 (global-set-key (kbd "M-Z") 'zap-up-to-char)
 
-;; Custom keybindings
+;; Keybindings for custom functions
 (global-set-key (kbd "<C-return>") 'open-next-line)
 (global-set-key (kbd "<C-S-return>") 'open-previous-line)
