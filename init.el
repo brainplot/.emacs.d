@@ -21,7 +21,6 @@
 
 ;; Load other parts of the config
 (load custom-file)
-(load "melpa" nil t)
 (load "hooks" nil t)
 (load "functions" nil t)
 (load "packages" nil t)

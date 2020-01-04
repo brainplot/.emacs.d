@@ -1,3 +1,5 @@
+(load "melpa" nil t)
+
 (setq use-package-always-ensure t)
 
 (use-package rainbow-delimiters
