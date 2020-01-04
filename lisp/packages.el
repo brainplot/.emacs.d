@@ -2,6 +2,9 @@
 
 (setq use-package-always-ensure t)
 
+(unless platform-linux-p
+  (delete 'pinentry package-selected-packages))
+
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
@@ -130,7 +133,7 @@
          ("\\.markdown\\'" . markdown-mode)))
 
 (use-package pinentry
-  :if (not (or (eq system-type 'ms-dos) (eq system-type 'windows-nt)))
+  :if platform-linux-p
   :config (pinentry-start))
 
 (use-package web-mode
