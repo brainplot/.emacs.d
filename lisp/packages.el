@@ -62,8 +62,8 @@
 (use-package ivy
   :demand
   :custom
-  (ivy-use-virtual-buffers t)
   (ivy-count-format "(%d/%d) ")
+  (ivy-use-virtual-buffers t)
   (ivy-wrap t)
   :bind (("C-x b" . ivy-switch-buffer)
          ("C-c v" . ivy-push-view)
