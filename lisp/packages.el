@@ -36,6 +36,7 @@
               ("M-n" . (lambda () (interactive) (company-complete-common-or-cycle)))
               ("<tab>" . company-complete-selection))
   :custom
+  (company-dabbrev-downcase nil)
   (company-idle-delay 0.2)
   (company-minimum-prefix-length 2)
   (company-backends '((company-capf :with company-yasnippet)
