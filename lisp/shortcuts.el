@@ -6,7 +6,6 @@
 (global-set-key (kbd "C-c p") #'project-find-file)
 (global-set-key (kbd "C-c q") #'kill-this-buffer)
 (global-set-key (kbd "C-c r") #'revert-buffer)
-(global-set-key (kbd "C-c s") #'save-some-buffers)
 (global-set-key (kbd "C-c t") #'toggle-truncate-lines)
 (global-set-key (kbd "C-c w") #'whitespace-mode)
 (global-set-key (kbd "C-x C-b") #'ibuffer)
