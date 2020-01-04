@@ -121,11 +121,6 @@
 (use-package expand-region
   :bind ("C-=" . er/expand-region))
 
-(use-package ace-window
-  :custom
-  (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
-  :bind ("M-o" . ace-window))
-
 (use-package markdown-mode
   :commands (markdown-mode gfm-mode)
   :mode (("README\\.md\\'" . gfm-mode)
