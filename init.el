@@ -55,3 +55,6 @@
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
+
+;; Allowed operations
+(put 'upcase-region 'disabled nil)
