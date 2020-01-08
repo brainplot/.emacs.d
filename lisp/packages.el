@@ -145,7 +145,7 @@
          ("\\.html\\'" . web-mode)
          ("\\.mustache\\'" . web-mode)
          ("\\.djhtml\\'" . web-mode))
-  :hook indent-with-spaces)
+  :hook (web-mode . indent-with-spaces))
 
 (use-package cmake-mode
   :hook indent-with-spaces)
