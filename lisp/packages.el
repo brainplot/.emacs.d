@@ -136,6 +136,7 @@
   (web-mode-code-indent-offset 2)
   (web-mode-css-indent-offset 2)
   (web-mode-markup-indent-offset 2)
+  (web-mode-offsetless-elements '("html"))
   :mode (("\\.php\\'" . web-mode)
          ("\\.tpl\\.php\\'" . web-mode)
          ("\\.[agj]sp\\'" . web-mode)
