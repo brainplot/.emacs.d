@@ -1,7 +1,9 @@
 ;; Set window title
 (setq frame-title-format
-      '("[" (:eval (user-login-name)) "@" (:eval (system-name)) "] " (:eval (if buffer-file-name
-                                                                                (abbreviate-file-name buffer-file-name) "%b"))
+      '("[" (:eval (user-login-name))
+        "@" (:eval (system-name))
+        "] " (:eval (if buffer-file-name
+                        (abbreviate-file-name buffer-file-name) "%b"))
         " - Emacs"))
 
 ;; General options
