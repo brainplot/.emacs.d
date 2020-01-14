@@ -151,7 +151,7 @@
   :hook indent-with-spaces)
 
 (use-package rust-mode
-  :hook indent-with-spaces)
+  :hook (rust-mode . indent-with-spaces))
 
 (use-package emmet-mode
   :custom
