@@ -5,6 +5,9 @@
 (when platform-windows-p
   (delete 'pinentry package-selected-packages))
 
+(when platform-linux-p
+  (delete 'ninja-mode package-selected-packages))
+
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
@@ -152,6 +155,8 @@
 
 (use-package rust-mode
   :hook (rust-mode . indent-with-spaces))
+
+(use-package ninja-mode)
 
 (use-package emmet-mode
   :custom
