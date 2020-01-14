@@ -2,7 +2,7 @@
 
 (setq use-package-always-ensure t)
 
-(unless platform-linux-p
+(when platform-windows-p
   (delete 'pinentry package-selected-packages))
 
 (use-package rainbow-delimiters
