@@ -151,7 +151,7 @@
   :hook (web-mode . indent-with-spaces))
 
 (use-package cmake-mode
-  :hook indent-with-spaces)
+  :hook (cmake-mode . indent-with-spaces))
 
 (use-package rust-mode
   :hook (rust-mode . indent-with-spaces))
