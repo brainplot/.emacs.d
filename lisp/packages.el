@@ -3,7 +3,12 @@
 (setq use-package-always-ensure t)
 
 (when platform-windows-p
-  (delete 'pinentry package-selected-packages))
+  (delete 'pinentry package-selected-packages)
+  (add-to-list 'load-path
+               (let ((cmake-share-dir (expand-file-name "share" (getenv "CMAKE_HOME"))))
+                 (expand-file-name "editors/emacs" (expand-file-name (seq-find #'(lambda (elt) (string-prefix-p "cmake-" elt))
+                                                                               (directory-files cmake-share-dir))
+                                                                     cmake-share-dir)))))
 
 (when platform-linux-p
   (delete 'ninja-mode package-selected-packages))
@@ -151,6 +156,7 @@
   :hook (web-mode . indent-with-spaces))
 
 (use-package cmake-mode
+  :demand
   :hook (cmake-mode . indent-with-spaces))
 
 (use-package rust-mode
