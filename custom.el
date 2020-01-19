@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ninja-mode yaml-mode powershell kaolin-themes emmet-mode web-mode markdown-mode expand-region multiple-cursors counsel yasnippet-snippets yasnippet rust-mode fish-mode magit company eglot rainbow-delimiters use-package))))
+    (yaml-mode powershell kaolin-themes emmet-mode web-mode markdown-mode expand-region multiple-cursors counsel yasnippet-snippets yasnippet rust-mode fish-mode magit company eglot rainbow-delimiters use-package))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

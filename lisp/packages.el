@@ -1,17 +1,20 @@
 (load "melpa" nil t)
 
-(setq use-package-always-ensure t)
+(add-hook 'after-init-hook #'(lambda ()
+                               "Add platform-specifc packages the package-selected-packages list"
+                               (let ((platform-specific-packages '()))
+                                 (when (eq system-type 'gnu/linux)
+                                   (push 'pinentry platform-specific-packages))
+                                 (when (or (eq system-type 'windows-nt) (eq system-type 'ms-dos))
+                                   (push 'ninja-mode platform-specific-packages))
+                                 (nconc package-selected-packages platform-specific-packages))))
 
 (when platform-windows-p
-  (delete 'pinentry package-selected-packages)
   (add-to-list 'load-path
                (let ((cmake-share-dir (expand-file-name "share" (getenv "CMAKE_HOME"))))
                  (expand-file-name "editors/emacs" (expand-file-name (seq-find #'(lambda (elt) (string-prefix-p "cmake-" elt))
                                                                                (directory-files cmake-share-dir))
                                                                      cmake-share-dir)))))
-
-(when platform-linux-p
-  (delete 'ninja-mode package-selected-packages))
 
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
