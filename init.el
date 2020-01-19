@@ -21,9 +21,6 @@
 (defvaralias 'c-basic-offset 'tab-width)
 (defvaralias 'cperl-indent-level 'tab-width)
 
-(defconst platform-linux-p (eq system-type 'gnu/linux))
-(defconst platform-windows-p (eq system-type 'windows-nt))
-
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
 ;; Load other parts of the config

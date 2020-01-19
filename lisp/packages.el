@@ -9,7 +9,7 @@
                                    (push 'ninja-mode platform-specific-packages))
                                  (nconc package-selected-packages platform-specific-packages))))
 
-(when platform-windows-p
+(when (or (eq system-type 'windows-nt) (eq system-type 'ms-dos))
   (add-to-list 'load-path
                (let ((cmake-share-dir (expand-file-name "share" (getenv "CMAKE_HOME"))))
                  (expand-file-name "editors/emacs" (expand-file-name (seq-find #'(lambda (elt) (string-prefix-p "cmake-" elt))
@@ -139,7 +139,7 @@
          ("\\.markdown\\'" . markdown-mode)))
 
 (use-package pinentry
-  :if platform-linux-p
+  :if (eq system-type 'gnu/linux)
   :config (pinentry-start))
 
 (use-package web-mode
