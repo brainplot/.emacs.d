@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: debug message
+# key: dbg
+# --
+message(STATUS "$1 = \${$1}")
