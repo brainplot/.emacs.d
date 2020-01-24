@@ -1,3 +1,5 @@
+(defconst emacs-start-time (current-time))
+
 ;; Set window title
 (setq frame-title-format
       '("[" (:eval (user-login-name))
