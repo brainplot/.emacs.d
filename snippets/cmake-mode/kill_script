@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Kill script
+# key: die
+# --
+message(FATAL_ERROR "${1:Script killed here for debugging purposes.}")
