@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Write Output
+# key: echo
+# --
+Write-Output '${1:message}'
