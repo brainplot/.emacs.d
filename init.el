@@ -52,6 +52,7 @@
 (electric-pair-mode)
 (line-number-mode)
 (menu-bar-mode -1)
+(semantic-mode)
 (show-paren-mode)
 (tool-bar-mode -1)
 
