@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Invoke Expression
+# key: iex
+# --
+Invoke-Expression "\$${1:Command} \$${2:Args}"
