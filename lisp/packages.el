@@ -70,11 +70,11 @@
   (company-idle-delay 0.2)
   (company-minimum-prefix-length 2)
   (company-backends '((company-capf :with company-yasnippet)
-                      company-semantic
-                      company-files
+                      (company-semantic :with company-yasnippet)
+                      (company-cmake :with company-yasnippet)
+                      (company-dabbrev-code company-keywords)
                       company-dabbrev
-                      company-cmake
-                      (company-dabbrev-code company-keywords)))
+                      company-files))
   :hook (after-init . global-company-mode))
 
 (use-package yasnippet
