@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: eq
+# key: eq
+# key: e
+# --
+(eq $0)
