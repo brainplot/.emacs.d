@@ -39,7 +39,17 @@
                              "--pch-storage=memory"
                              "-j=6"))))
 
-(use-package git-commit)
+(use-package git-commit
+  :defer t)
+
+(use-package gitignore-mode
+  :mode ("\\.dockerignore\\'"))
+
+(use-package gitconfig-mode
+  :defer t)
+
+(use-package gitattributes-mode
+  :defer t)
 
 (use-package magit
   :bind (("C-x g" . magit-status)
