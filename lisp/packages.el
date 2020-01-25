@@ -3,13 +3,13 @@
 (package-initialize)
 
 (add-hook 'after-init-hook #'(lambda ()
-                               "Add platform-specifc packages the package-selected-packages list"
-                               (let ((platform-specific-packages '()))
-                                 (when (eq system-type 'gnu/linux)
-                                   (push 'pinentry platform-specific-packages))
-                                 (when (or (eq system-type 'windows-nt) (eq system-type 'ms-dos))
-                                   (push 'ninja-mode platform-specific-packages))
-                                 (nconc package-selected-packages platform-specific-packages))))
+                               "Remove unneeded packages from the package-selected-packages list, according to the platform"
+                               (when (eq system-type 'gnu/linux)
+                                 ;; ninja-mode is provided by Arch Linux with the ninja package
+                                 (exclude-package-on-this-platform 'ninja-mode))
+                               (when (or (eq system-type 'windows-nt) (eq system-type 'ms-dos))
+                                 ;; pinentry doesn't work on Windows
+                                 (exclude-package-on-this-platform 'pinentry))))
 
 (when (or (eq system-type 'windows-nt) (eq system-type 'ms-dos))
   (add-to-list 'load-path

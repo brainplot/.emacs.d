@@ -22,3 +22,9 @@
 (defun indent-with-spaces ()
   "Set indentation for the current buffer to spaces."
   (setq indent-tabs-mode nil))
+
+(defun exclude-package-on-this-platform (package)
+  "Remove a package from the package-selected-packages list.
+
+If PACKAGE is not present in the package-selected-packages list, do nothing."
+  (setq package-selected-packages (delete package package-selected-packages)))
