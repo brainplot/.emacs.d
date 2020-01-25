@@ -196,7 +196,7 @@
   :hook (sgml-mode css-mode js-jsx-mode web-mode))
 
 (use-package powershell
-  :commands (powershell powershell-mode))
+  :defer t)
 
 (use-package yaml-mode
   :mode ("\\.clang-format\\'"))
