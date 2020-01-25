@@ -58,6 +58,8 @@
   :defer t)
 
 (use-package magit
+  :custom
+  (magit-commit-show-diff nil)
   :bind (("C-x g" . magit-status)
          ("C-c g" . magit-file-dispatch)))
 
