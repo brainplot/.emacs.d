@@ -23,7 +23,7 @@
 (defvaralias 'c-basic-offset 'tab-width)
 (defvaralias 'cperl-indent-level 'tab-width)
 
-(add-to-list 'load-path "~/.emacs.d/lisp")
+(push (expand-file-name "~/.emacs.d/lisp") load-path)
 
 ;; Load other parts of the config
 (load custom-file)
@@ -41,9 +41,11 @@
       kept-old-versions 0   ; Number of oldest versions to keep.
       version-control t)    ; Use version numbers for backups.
 
-(add-to-list 'default-frame-alist '(font . "Hack-13"))
+;; Default frame settings
+(setq default-frame-alist '((font . "Hack-13")))
 
-(add-to-list 'auto-mode-alist '("\\.bash_aliases\\'" . shell-script-mode))
+;; File associations
+(push '("\\.bash_aliases\\'" . shell-script-mode) auto-mode-alist)
 
 ;; Modes
 (blink-cursor-mode -1)

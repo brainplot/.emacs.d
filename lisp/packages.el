@@ -12,18 +12,18 @@
                                  (exclude-package-on-this-platform 'pinentry))))
 
 (when (or (eq system-type 'windows-nt) (eq system-type 'ms-dos))
-  (add-to-list 'load-path
-               (let ((cmake-info (with-temp-buffer
-                                   (cons (call-process "WHERE" nil t nil "cmake.exe") (buffer-string)))))
-                 (when (eq 0 (car cmake-info))
-                   (let* ((cmake-version-string (shell-command-to-string "cmake.exe /V"))
-                          (cmake-asset-dir (concat "/cmake-"
-                                                   (substring cmake-version-string
-                                                              (string-match "[0-9]+\\.[0-9]+" cmake-version-string 14)
-                                                              (match-end 0)))))
-                     (expand-file-name
-                      (concat "../share" cmake-asset-dir "/editors/emacs")
-                      (file-name-directory (cdr cmake-info))))))))
+  (push (let ((cmake-info (with-temp-buffer
+                            (cons (call-process "WHERE" nil t nil "cmake.exe") (buffer-string)))))
+          (when (eq 0 (car cmake-info))
+            (let* ((cmake-version-string (shell-command-to-string "cmake.exe /V"))
+                   (cmake-asset-dir (concat "/cmake-"
+                                            (substring cmake-version-string
+                                                       (string-match "[0-9]+\\.[0-9]+" cmake-version-string 14)
+                                                       (match-end 0)))))
+              (expand-file-name
+               (concat "../share" cmake-asset-dir "/editors/emacs")
+               (file-name-directory (cdr cmake-info))))))
+        load-path))
 
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
@@ -40,14 +40,10 @@
          :map eglot-mode-map
          ("C-c f" . eglot-format))
   :config
-  (add-to-list 'eglot-stay-out-of 'company)
-  (add-to-list 'eglot-server-programs
-               '(c++-mode . ("clangd"
-                             "--background-index"
-                             "--compile-commands-dir=build"
-                             "--header-insertion=never"
-                             "--pch-storage=memory"
-                             "-j=6"))))
+  (push 'company eglot-stay-out-of)
+  (push '(c++-mode . ("clangd" "--background-index" "--compile-commands-dir=build"
+                      "--header-insertion=never" "--pch-storage=memory" "-j=6"))
+        eglot-server-programs))
 
 (use-package git-commit
   :defer t)
