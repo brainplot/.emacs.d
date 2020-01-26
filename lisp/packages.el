@@ -206,3 +206,7 @@
 (use-package move-text
   :bind (("M-p" . move-text-up)
          ("M-n" . move-text-down)))
+
+(use-package diredfl
+  :commands diredfl-mode
+  :hook (dired-mode . diredfl-mode))
