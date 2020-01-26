@@ -29,9 +29,9 @@
   :hook (prog-mode . rainbow-delimiters-mode))
 
 (use-package modus-vivendi-theme
-  :custom
-  (modus-vivendi-theme-bold-constructs t)
-  (modus-vivendi-theme-slanted-constructs t)
+  :init
+  (setq modus-vivendi-theme-bold-constructs t)
+  (setq modus-vivendi-theme-slanted-constructs t)
   :config
   (load-theme 'modus-vivendi t))
 
