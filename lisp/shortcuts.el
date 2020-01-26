@@ -1,5 +1,4 @@
 ;; Keybindings for built-in functions
-(global-set-key (kbd "<f8>") #'speedbar)
 (global-set-key (kbd "<f9>") #'sort-lines)
 (global-set-key (kbd "C-c /") #'comment-or-uncomment-region)
 (global-set-key (kbd "C-c C-k") #'kill-some-buffers)

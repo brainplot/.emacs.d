@@ -210,3 +210,16 @@
 (use-package diredfl
   :commands diredfl-mode
   :hook (dired-mode . diredfl-mode))
+
+(use-package dired-sidebar
+  :bind ("<f8>" . dired-sidebar-toggle-sidebar)
+  :commands dired-sidebar-toggle-sidebar
+  :init
+  (add-hook 'dired-sidebar-mode-hook
+            #'(lambda ()
+                (toggle-scroll-bar -1)
+                (unless (file-remote-p default-directory)
+                  (auto-revert-mode))))
+  :config
+  (push 'toggle-window-split dired-sidebar-toggle-hidden-commands)
+  (push 'rotate-windows dired-sidebar-toggle-hidden-commands))
