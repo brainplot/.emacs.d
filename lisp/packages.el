@@ -223,3 +223,7 @@
   :config
   (push 'toggle-window-split dired-sidebar-toggle-hidden-commands)
   (push 'rotate-windows dired-sidebar-toggle-hidden-commands))
+
+(use-package google-this
+  :defer t
+  :config (google-this-mode 1))

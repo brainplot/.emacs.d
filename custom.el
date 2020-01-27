@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (company counsel dired-sidebar diredfl eglot emmet-mode expand-region fish-mode gitattributes-mode gitconfig-mode gitignore-mode markdown-mode modus-vivendi-theme move-text multiple-cursors ninja-mode pinentry powershell rainbow-delimiters rust-mode use-package web-mode yaml-mode yasnippet yasnippet-snippets))))
+    (company counsel dired-sidebar diredfl eglot emmet-mode expand-region fish-mode gitattributes-mode gitconfig-mode gitignore-mode google-this magit markdown-mode modus-vivendi-theme move-text multiple-cursors ninja-mode pinentry powershell rainbow-delimiters rust-mode use-package web-mode yaml-mode yasnippet yasnippet-snippets))))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
