@@ -23,7 +23,7 @@
 (defvaralias 'c-basic-offset 'tab-width)
 (defvaralias 'cperl-indent-level 'tab-width)
 
-(push (expand-file-name "~/.emacs.d/lisp") load-path)
+(push "~/.emacs.d/lisp" load-path)
 
 ;; Load other parts of the config
 (load custom-file)
