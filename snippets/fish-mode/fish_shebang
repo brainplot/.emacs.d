@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: fish shebang
+# key: fish
+# --
+#!/usr/bin/env fish
