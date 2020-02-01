@@ -38,7 +38,8 @@
 (use-package eglot
   :bind (("C-c l" . eglot)
          :map eglot-mode-map
-         ("C-c f" . eglot-format))
+         ("C-c f" . eglot-format)
+         ("C-c <f4>" . eglot-shutdown))
   :config
   (push 'company eglot-stay-out-of)
   (push '(c++-mode . ("clangd" "--background-index" "--compile-commands-dir=build"
