@@ -28,12 +28,13 @@
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
-(use-package modus-vivendi-theme
+(use-package doom-themes
   :init
-  (setq modus-vivendi-theme-bold-constructs t)
-  (setq modus-vivendi-theme-slanted-constructs t)
+  (setq doom-themes-enable-bold t
+        doom-themes-enable-italic t)
   :config
-  (load-theme 'modus-vivendi t))
+  (load-theme 'doom-vibrant t)
+  (doom-themes-org-config))
 
 (use-package eglot
   :bind (("C-c l" . eglot)
