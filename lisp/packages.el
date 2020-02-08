@@ -2,14 +2,35 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-(add-hook 'after-init-hook #'(lambda ()
-                               "Remove unneeded packages from the package-selected-packages list, according to the platform"
-                               (when (eq system-type 'gnu/linux)
-                                 ;; ninja-mode is provided by Arch Linux with the ninja package
-                                 (exclude-package-on-this-platform 'ninja-mode))
-                               (when (or (eq system-type 'windows-nt) (eq system-type 'ms-dos))
-                                 ;; pinentry doesn't work on Windows
-                                 (exclude-package-on-this-platform 'pinentry))))
+(let ((local-package-list '(doom-themes
+                            company
+                            counsel
+                            dired-sidebar
+                            diredfl
+                            eglot
+                            emmet-mode
+                            expand-region
+                            fish-mode
+                            gitattributes-mode
+                            gitconfig-mode
+                            gitignore-mode
+                            google-this
+                            magit
+                            markdown-mode
+                            move-text
+                            multiple-cursors
+                            powershell
+                            rainbow-delimiters
+                            rust-mode
+                            use-package
+                            yaml-mode
+                            yasnippet
+                            yasnippet-snippets)))
+  (when (eq system-type 'gnu/linux)
+    (push 'pinentry local-package-list))
+  (when (or (eq system-type 'windows-nt) (eq system-type 'ms-dos))
+    (push 'ninja-mode local-package-list))
+  (package--save-selected-packages local-package-list))
 
 (when (or (eq system-type 'windows-nt) (eq system-type 'ms-dos))
   (push (let ((cmake-info (with-temp-buffer

@@ -9,7 +9,7 @@
         " - Emacs"))
 
 ;; General options
-(setq custom-file "~/.emacs.d/custom.el"
+(setq custom-file "custom.el"
       gc-cons-threshold 1048576
       gc-cons-percentage 0.25
       inhibit-startup-screen t
@@ -26,7 +26,6 @@
 (push "~/.emacs.d/lisp" load-path)
 
 ;; Load other parts of the config
-(load custom-file)
 (load "hooks" nil t)
 (load "functions" nil t)
 (load "packages" nil t)
