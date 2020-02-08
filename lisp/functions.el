@@ -27,4 +27,4 @@
   "Remove a package from the package-selected-packages list.
 
 If PACKAGE is not present in the package-selected-packages list, do nothing."
-  (setq package-selected-packages (delete package package-selected-packages)))
+  (setq package-selected-packages (remove package package-selected-packages)))
