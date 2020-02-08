@@ -184,22 +184,6 @@
   :if (eq system-type 'gnu/linux)
   :config (pinentry-start))
 
-(use-package web-mode
-  :custom
-  (web-mode-code-indent-offset 2)
-  (web-mode-css-indent-offset 2)
-  (web-mode-markup-indent-offset 2)
-  (web-mode-offsetless-elements '("html"))
-  :mode (("\\.php\\'" . web-mode)
-         ("\\.tpl\\.php\\'" . web-mode)
-         ("\\.[agj]sp\\'" . web-mode)
-         ("\\.as[cp]x\\'" . web-mode)
-         ("\\.erb\\'" . web-mode)
-         ("\\.html\\'" . web-mode)
-         ("\\.mustache\\'" . web-mode)
-         ("\\.djhtml\\'" . web-mode))
-  :hook (web-mode . indent-with-spaces))
-
 (use-package cmake-mode
   :demand
   :hook (cmake-mode . indent-with-spaces))
