@@ -19,6 +19,7 @@
                             markdown-mode
                             move-text
                             multiple-cursors
+                            php-mode
                             powershell
                             rainbow-delimiters
                             rust-mode
@@ -233,3 +234,6 @@
 (use-package google-this
   :defer t
   :config (google-this-mode 1))
+
+(use-package php-mode
+  :defer t)
