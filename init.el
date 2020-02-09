@@ -9,7 +9,7 @@
         " - Emacs"))
 
 ;; General options
-(setq custom-file "custom.el"
+(setq custom-file (expand-file-name "~/.emacs.d/custom.el")
       gc-cons-threshold 1048576
       gc-cons-percentage 0.25
       inhibit-startup-screen t
