@@ -26,6 +26,7 @@
 (push "~/.emacs.d/lisp" load-path)
 
 ;; Load other parts of the config
+(load custom-file t t)
 (load "hooks" nil t)
 (load "functions" nil t)
 (load "packages" nil t)
