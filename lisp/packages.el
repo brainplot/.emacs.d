@@ -28,7 +28,8 @@
                             yasnippet
                             yasnippet-snippets)))
   (when (eq system-type 'gnu/linux)
-    (push 'pinentry local-package-list))
+    (push 'pinentry local-package-list)
+    (push 'emms local-package-list))
   (when (or (eq system-type 'windows-nt) (eq system-type 'ms-dos))
     (push 'ninja-mode local-package-list))
   (package--save-selected-packages local-package-list))
@@ -235,3 +236,16 @@
   :config
   (define-key php-mode-map [f5] 'html-mode)
   (define-key html-mode-map [f5] 'php-mode))
+
+(use-package emms-setup
+  :demand
+  :if (eq system-type 'gnu/linux)
+  :custom
+  (emms-source-file-default-directory "~/Music/")
+  :bind (("<XF86AudioPlay>" . emms-pause)
+         ("<XF86AudioStop>" . emms-stop)
+         ("<XF86AudioPrev>" . emms-previous)
+         ("<XF86AudioNext>" . emms-next))
+  :config
+  (emms-all)
+  (emms-default-players))
