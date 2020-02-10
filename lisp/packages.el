@@ -2,7 +2,7 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-(let ((local-package-list '(doom-themes
+(let ((local-package-list '(color-theme-sanityinc-tomorrow
                             company
                             counsel
                             dired-sidebar
@@ -50,13 +50,8 @@
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
-(use-package doom-themes
-  :init
-  (setq doom-themes-enable-bold t
-        doom-themes-enable-italic t)
-  :config
-  (load-theme 'doom-vibrant t)
-  (doom-themes-org-config))
+(use-package color-theme-sanityinc-tomorrow
+  :config (color-theme-sanityinc-tomorrow-night))
 
 (use-package eglot
   :bind (("C-c l" . eglot)
