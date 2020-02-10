@@ -231,4 +231,7 @@
   :config (google-this-mode 1))
 
 (use-package php-mode
-  :defer t)
+  :defer t
+  :config
+  (define-key php-mode-map [f5] 'html-mode)
+  (define-key html-mode-map [f5] 'php-mode))
