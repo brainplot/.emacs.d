@@ -41,6 +41,10 @@
       kept-old-versions 0   ; Number of oldest versions to keep.
       version-control t)    ; Use version numbers for backups.
 
+;; Ediff settings
+(setq ediff-split-window-function 'split-window-horizontally
+      ediff-window-setup-function 'ediff-setup-windows-plain)
+
 ;; Default frame settings
 (setq default-frame-alist '((font . "Hack-13")))
 
