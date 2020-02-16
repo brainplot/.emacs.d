@@ -4,6 +4,7 @@
 
 (let ((local-package-list '(color-theme-sanityinc-tomorrow
                             company
+                            company-php
                             counsel
                             dired-sidebar
                             diredfl
@@ -236,6 +237,18 @@
   :config
   (define-key php-mode-map [f5] 'html-mode)
   (define-key html-mode-map [f5] 'php-mode))
+
+(use-package company-php
+  :bind (:map php-mode-map
+              ("M-]" . ac-php-find-symbol-at-point)
+              ("M-[" . ac-php-location-stack-back))
+  :hook (php-mode . (lambda ()
+                      ;; Enable ElDoc support (optional)
+                      ;; (ac-php-core-eldoc-setup)
+
+                      (set (make-local-variable 'company-backends)
+                           '((company-ac-php-backend company-dabbrev-code)
+                             company-capf company-files)))))
 
 (use-package emms-setup
   :demand
