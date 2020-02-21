@@ -60,7 +60,8 @@
   :bind (("C-c l" . eglot)
          :map eglot-mode-map
          ("C-c f" . eglot-format)
-         ("C-c <f4>" . eglot-shutdown))
+         ("C-c <f4>" . eglot-shutdown)
+         ("C-c <f1>" . eglot-help-at-point))
   :config
   (push 'company eglot-stay-out-of)
   (push '(c++-mode . ("clangd" "--background-index" "--compile-commands-dir=build"
