@@ -16,6 +16,7 @@
                             gitconfig-mode
                             gitignore-mode
                             google-this
+                            js2-mode
                             magit
                             markdown-mode
                             move-text
@@ -200,6 +201,10 @@
               ("C-M-p" . emmet-prev-edit-point)
               ("C-M-n" . emmet-next-edit-point))
   :hook (sgml-mode css-mode js-jsx-mode web-mode))
+
+(use-package js2-mode
+  :mode (("\\.js\\'" . js2-mode)
+         ("\\.jsx\\'" . js2-jsx-mode)))
 
 (use-package powershell
   :defer t)
