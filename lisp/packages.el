@@ -200,7 +200,7 @@
               ("<C-tab>" . emmet-expand-yas)
               ("C-M-p" . emmet-prev-edit-point)
               ("C-M-n" . emmet-next-edit-point))
-  :hook (sgml-mode css-mode js-jsx-mode web-mode))
+  :hook (sgml-mode css-mode js-jsx-mode))
 
 (use-package js2-mode
   :mode (("\\.js\\'" . js2-mode)
