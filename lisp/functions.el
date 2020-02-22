@@ -1,3 +1,5 @@
+(require 'ansi-color)
+
 (defun open-previous-line (arg)
   "Open a new line before the current one."
   (interactive "p")
@@ -28,3 +30,6 @@
 
 If PACKAGE is not present in the package-selected-packages list, do nothing."
   (setq package-selected-packages (remove package package-selected-packages)))
+
+(defun colorize-compilation-buffer ()
+  (ansi-color-apply-on-region compilation-filter-start (point-max)))

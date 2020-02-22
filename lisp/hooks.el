@@ -10,3 +10,5 @@
                     (float-time
                      (time-subtract (current-time) emacs-start-time))))
                (message "Loading init script...done (%.3fs) [after-init]" elapsed))) t)
+
+(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
