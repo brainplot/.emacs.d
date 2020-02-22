@@ -268,7 +268,8 @@
   :bind (("<XF86AudioPlay>" . emms-pause)
          ("<XF86AudioStop>" . emms-stop)
          ("<XF86AudioPrev>" . emms-previous)
-         ("<XF86AudioNext>" . emms-next))
+         ("<XF86AudioNext>" . emms-next)
+         ("C-c C-." . emms-player-mpd-connect))
   :config
   (emms-all)
   (push 'emms-info-mpd emms-info-functions)
