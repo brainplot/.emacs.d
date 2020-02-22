@@ -260,11 +260,16 @@
   :demand
   :if (eq system-type 'gnu/linux)
   :custom
-  (emms-source-file-default-directory "~/Music/")
+  (emms-player-mpd-music-directory "~/Music")
+  (emms-player-mpd-server-name "localhost")
+  (emms-player-mpd-server-port "6600")
+  (emms-source-file-default-directory emms-player-mpd-music-directory)
+  (emms-volume-change-function 'emms-volume-mpd-change)
   :bind (("<XF86AudioPlay>" . emms-pause)
          ("<XF86AudioStop>" . emms-stop)
          ("<XF86AudioPrev>" . emms-previous)
          ("<XF86AudioNext>" . emms-next))
   :config
   (emms-all)
-  (emms-default-players))
+  (push 'emms-info-mpd emms-info-functions)
+  (push 'emms-player-mpd emms-player-list))
