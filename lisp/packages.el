@@ -25,6 +25,7 @@
                             powershell
                             rainbow-delimiters
                             rust-mode
+                            typescript-mode
                             use-package
                             yaml-mode
                             yasnippet
@@ -206,6 +207,9 @@
 (use-package js2-mode
   :mode (("\\.js\\'" . js2-mode)
          ("\\.jsx\\'" . js2-jsx-mode)))
+
+(use-package typescript-mode
+  :defer t)
 
 (use-package powershell
   :defer t)
