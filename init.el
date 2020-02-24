@@ -50,6 +50,7 @@
 
 ;; File associations
 (push '("\\.bash_aliases\\'" . shell-script-mode) auto-mode-alist)
+(push '("\\.pam_environment\\'" . conf-unix-mode) auto-mode-alist)
 (push '("/PKGBUILD\\'" . shell-script-mode) auto-mode-alist)
 
 ;; Modes
