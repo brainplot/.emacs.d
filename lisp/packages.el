@@ -32,6 +32,7 @@
                             yasnippet-snippets)))
   (when (eq system-type 'gnu/linux)
     (push 'pinentry local-package-list)
+    (push 'pkgbuild-mode local-package-list)
     (push 'emms local-package-list))
   (when (or (eq system-type 'windows-nt) (eq system-type 'ms-dos))
     (push 'ninja-mode local-package-list))
@@ -279,3 +280,6 @@
   (emms-all)
   (push 'emms-info-mpd emms-info-functions)
   (push 'emms-player-mpd emms-player-list))
+
+(use-package pkgbuild-mode
+  :defer t)
