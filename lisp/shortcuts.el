@@ -15,3 +15,4 @@
 ;; Keybindings for custom functions
 (global-set-key (kbd "<C-return>") #'open-next-line)
 (global-set-key (kbd "<C-S-return>") #'open-previous-line)
+(global-set-key (kbd "C-c SPC") #'toggle-indentation-style)

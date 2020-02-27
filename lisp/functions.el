@@ -33,3 +33,13 @@ If PACKAGE is not present in the package-selected-packages list, do nothing."
 
 (defun colorize-compilation-buffer ()
   (ansi-color-apply-on-region compilation-filter-start (point-max)))
+
+(defun toggle-indentation-style ()
+  "Switch between indentation with tabs and indentation with spaces."
+  (interactive)
+  (if indent-tabs-mode
+      (progn
+        (message "Current buffer will now use spaces for indentation.")
+        (setq indent-tabs-mode nil))
+    (message "Current buffer will now use tabs for indentation.")
+    (setq indent-tabs-mode t)))
