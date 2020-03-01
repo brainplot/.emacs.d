@@ -2,7 +2,8 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-(let ((local-package-list '(color-theme-sanityinc-tomorrow
+(let ((local-package-list '(ace-window
+                            color-theme-sanityinc-tomorrow
                             company
                             company-php
                             counsel
@@ -283,3 +284,7 @@
 
 (use-package pkgbuild-mode
   :defer t)
+
+(use-package ace-window
+  :custom (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
+  :bind ("M-o" . ace-window))
