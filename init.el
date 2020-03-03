@@ -16,8 +16,7 @@
       require-final-newline t
       tab-always-indent 'complete)
 
-(setq-default display-line-numbers 'relative
-              indent-tabs-mode t
+(setq-default indent-tabs-mode t
               tab-width 4)
 
 (defvaralias 'c-basic-offset 'tab-width)
@@ -54,10 +53,8 @@
 
 ;; Modes
 (blink-cursor-mode -1)
-(column-number-mode)
 (delete-selection-mode)
 (electric-pair-mode)
-(line-number-mode)
 (menu-bar-mode -1)
 (semantic-mode)
 (show-paren-mode)

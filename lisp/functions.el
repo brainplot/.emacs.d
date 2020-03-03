@@ -43,3 +43,8 @@ If PACKAGE is not present in the package-selected-packages list, do nothing."
         (setq indent-tabs-mode nil))
     (message "Current buffer will now use tabs for indentation.")
     (setq indent-tabs-mode t)))
+
+(defun set-up-prog-mode ()
+  (setq display-line-numbers 'relative)
+  (setq-local column-number-mode t)
+  (setq-local line-number-mode t))

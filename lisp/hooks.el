@@ -12,3 +12,7 @@
                (message "Loading init script...done (%.3fs) [after-init]" elapsed))) t)
 
 (add-hook 'compilation-filter-hook #'colorize-compilation-buffer)
+
+(add-hook 'prog-mode-hook #'set-up-prog-mode)
+
+(add-hook 'conf-mode-hook #'set-up-prog-mode)
