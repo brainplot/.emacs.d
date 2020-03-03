@@ -11,3 +11,6 @@ recentf
 
 # Config file used by multiple-cursors.el
 .mc-lists.el
+
+# eshell history
+eshell/history
