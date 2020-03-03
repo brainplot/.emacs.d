@@ -1,6 +1,5 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
 
 (let ((local-package-list '(ace-window
                             color-theme-sanityinc-tomorrow

@@ -1,12 +1,16 @@
 (defconst emacs-start-time (current-time))
 
+(defconst remacs-p (string-match-p "\\bremacs\\b" invocation-name))
+
 ;; Set window title
 (setq frame-title-format
       '("[" (:eval (user-login-name))
         "@" (:eval (system-name))
         "] " (:eval (if buffer-file-name
                         (abbreviate-file-name buffer-file-name) "%b"))
-        " - Emacs"))
+        (if remacs-p
+            " - Remacs"
+          " - Emacs")))
 
 ;; General options
 (setq custom-file (expand-file-name "~/.emacs.d/custom.el")
@@ -24,10 +28,15 @@
 
 (push "~/.emacs.d/lisp" load-path)
 
+;; Load emacs packages included with the distribution, which otherwise
+;; wouldn't be in the load-path when running remacs
+(when remacs-p
+  (push "/usr/share/emacs/site-lisp" load-path))
+
 ;; Load other parts of the config
 (load custom-file t t)
-(load "hooks" nil t)
 (load "functions" nil t)
+(load "hooks" nil t)
 (load "packages" nil t)
 (load "shortcuts" nil t)
 
