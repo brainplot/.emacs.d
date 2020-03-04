@@ -1,5 +1,3 @@
-(defconst emacs-start-time (current-time))
-
 (defconst remacs-p (string-match-p "\\bremacs\\b" invocation-name))
 
 ;; Set window title

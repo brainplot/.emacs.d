@@ -34,6 +34,9 @@ If PACKAGE is not present in the package-selected-packages list, do nothing."
 (defun colorize-compilation-buffer ()
   (ansi-color-apply-on-region compilation-filter-start (point-max)))
 
+(defun log-emacs-init-time ()
+  (message "Loading init script completed in %s." (emacs-init-time)))
+
 (defun toggle-indentation-style ()
   "Switch between indentation with tabs and indentation with spaces."
   (interactive)
