@@ -1,14 +1,10 @@
-(defconst remacs-p (string-match-p "\\bremacs\\b" invocation-name))
-
 ;; Set window title
 (setq frame-title-format
       '("[" (:eval (user-login-name))
         "@" (:eval (system-name))
         "] " (:eval (if buffer-file-name
                         (abbreviate-file-name buffer-file-name) "%b"))
-        (if remacs-p
-            " - Remacs"
-          " - Emacs")))
+        " - Emacs"))
 
 ;; General options
 (setq custom-file (expand-file-name "~/.emacs.d/custom.el")
@@ -25,11 +21,6 @@
 (defvaralias 'cperl-indent-level 'tab-width)
 
 (push "~/.emacs.d/lisp" load-path)
-
-;; Load emacs packages included with the distribution, which otherwise
-;; wouldn't be in the load-path when running remacs
-(when remacs-p
-  (push "/usr/share/emacs/site-lisp" load-path))
 
 ;; Load other parts of the config
 (load custom-file t t)
