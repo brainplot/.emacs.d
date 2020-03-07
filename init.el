@@ -6,9 +6,16 @@
                         (abbreviate-file-name buffer-file-name) "%b"))
         " - Emacs"))
 
+;; Custom file
+(setq custom-file (expand-file-name
+                   (concat "custom-"
+                           (replace-regexp-in-string "\\W" "-" (symbol-name system-type) t)
+                           ".el")
+                   user-emacs-directory))
+(load custom-file t t)
+
 ;; General options
-(setq custom-file (expand-file-name "~/.emacs.d/custom.el")
-      gc-cons-threshold 1048576
+(setq gc-cons-threshold 1048576
       gc-cons-percentage 0.25
       inhibit-startup-screen t
       require-final-newline t
@@ -23,7 +30,6 @@
 (push "~/.emacs.d/lisp" load-path)
 
 ;; Load other parts of the config
-(load custom-file t t)
 (load "functions" nil t)
 (load "hooks" nil t)
 (load "packages" nil t)

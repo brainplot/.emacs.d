@@ -2,41 +2,6 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-(let ((local-package-list '(ace-window
-                            color-theme-sanityinc-tomorrow
-                            company
-                            counsel
-                            dired-sidebar
-                            diredfl
-                            eglot
-                            emmet-mode
-                            expand-region
-                            fish-mode
-                            gitattributes-mode
-                            gitconfig-mode
-                            gitignore-mode
-                            google-this
-                            js2-mode
-                            magit
-                            markdown-mode
-                            move-text
-                            multiple-cursors
-                            powershell
-                            rainbow-delimiters
-                            rust-mode
-                            typescript-mode
-                            use-package
-                            yaml-mode
-                            yasnippet
-                            yasnippet-snippets)))
-  (when (eq system-type 'gnu/linux)
-    (push 'pinentry local-package-list)
-    (push 'pkgbuild-mode local-package-list)
-    (push 'emms local-package-list))
-  (when (or (eq system-type 'windows-nt) (eq system-type 'ms-dos))
-    (push 'ninja-mode local-package-list))
-  (package--save-selected-packages local-package-list))
-
 (when (or (eq system-type 'windows-nt) (eq system-type 'ms-dos))
   (push (let ((cmake-info (with-temp-buffer
                             (cons (call-process "WHERE" nil t nil "cmake.exe") (buffer-string)))))
