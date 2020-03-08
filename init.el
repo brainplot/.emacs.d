@@ -15,9 +15,7 @@
 (load custom-file t t)
 
 ;; General options
-(setq gc-cons-threshold 1048576
-      gc-cons-percentage 0.25
-      inhibit-startup-screen t
+(setq inhibit-startup-screen t
       require-final-newline t
       tab-always-indent 'complete)
 
