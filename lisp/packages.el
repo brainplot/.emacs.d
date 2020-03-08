@@ -229,3 +229,6 @@
 (use-package ace-window
   :custom (aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l))
   :bind ("M-o" . ace-window))
+
+(use-package fish-mode
+  :defer t)
