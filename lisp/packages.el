@@ -35,7 +35,8 @@
                       "--header-insertion=never" "--pch-storage=memory" "-j=6"))
         eglot-server-programs))
 
-(use-package git-commit)
+(use-package git-commit
+  :defer t)
 
 (use-package gitignore-mode
   :mode ("\\.dockerignore\\'"))
@@ -92,13 +93,9 @@
   (ivy-mode 1))
 
 (use-package swiper
-  :after ivy
-  :demand
   :bind ("C-s" . swiper-isearch))
 
 (use-package counsel
-  :after swiper
-  :demand
   :bind (("M-x". counsel-M-x)
          ("C-x C-f". counsel-find-file)
          ("<f1> f". counsel-describe-function)
