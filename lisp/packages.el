@@ -2,19 +2,13 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-(when (or (eq system-type 'windows-nt) (eq system-type 'ms-dos))
-  (push (let ((cmake-info (with-temp-buffer
-                            (cons (call-process "WHERE" nil t nil "cmake.exe") (buffer-string)))))
-          (when (eq 0 (car cmake-info))
-            (let* ((cmake-version-string (shell-command-to-string "cmake.exe /V"))
-                   (cmake-asset-dir (concat "/cmake-"
-                                            (substring cmake-version-string
-                                                       (string-match "[0-9]+\\.[0-9]+" cmake-version-string 14)
-                                                       (match-end 0)))))
-              (expand-file-name
-               (concat "../share" cmake-asset-dir "/editors/emacs")
-               (file-name-directory (cdr cmake-info))))))
-        load-path))
+(when (eq system-type 'windows-nt)
+  (push
+   (expand-file-name
+    "Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/\
+Microsoft/CMake/CMake/share/cmake-3.15/editors/emacs"
+    (getenv "ProgramFiles(x86)"))
+   load-path))
 
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
