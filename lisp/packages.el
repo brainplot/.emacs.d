@@ -17,11 +17,11 @@ Microsoft/CMake/CMake/share/cmake-3.15/editors/emacs"
   :config (color-theme-sanityinc-tomorrow-night))
 
 (use-package eglot
-  :bind (("C-c l" . eglot)
+  :bind (("C-c l"    . eglot)
          :map eglot-mode-map
-         ("C-c f" . eglot-format)
+         ("C-c f"    . eglot-format)
          ("C-c <f4>" . eglot-shutdown)
-         ("C-c <f1>" . eglot-help-at-point))
+         ("C-c h"    . eglot-help-at-point))
   :config
   (push 'company eglot-stay-out-of)
   (push '(java-mode . ("jdtls")) eglot-server-programs)
