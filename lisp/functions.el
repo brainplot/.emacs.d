@@ -25,12 +25,6 @@
   "Set indentation for the current buffer to spaces."
   (setq indent-tabs-mode nil))
 
-(defun exclude-package-on-this-platform (package)
-  "Remove a package from the package-selected-packages list.
-
-If PACKAGE is not present in the package-selected-packages list, do nothing."
-  (setq package-selected-packages (remove package package-selected-packages)))
-
 (defun colorize-compilation-buffer ()
   (ansi-color-apply-on-region compilation-filter-start (point-max)))
 
