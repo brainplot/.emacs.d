@@ -58,7 +58,6 @@
 (delete-selection-mode)
 (electric-pair-mode)
 (menu-bar-mode -1)
-(semantic-mode)
 (show-paren-mode)
 (tool-bar-mode -1)
 
