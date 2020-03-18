@@ -75,3 +75,4 @@
 ;; Allowed operations
 (put 'upcase-region 'disabled nil)
 (put 'scroll-left 'disabled nil)
+(put 'downcase-region 'disabled nil)
