@@ -13,8 +13,8 @@ Microsoft/CMake/CMake/share/cmake-3.15/editors/emacs"
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
-(use-package color-theme-sanityinc-tomorrow
-  :config (color-theme-sanityinc-tomorrow-night))
+(use-package modus-vivendi-theme
+  :config (load-theme 'modus-vivendi t))
 
 (use-package eglot
   :bind (("C-c l"    . eglot)
