@@ -24,6 +24,9 @@ Microsoft/CMake/CMake/share/cmake-3.15/editors/emacs"
          ("C-c x"    . eglot-code-actions)
          ("C-c h"    . eglot-help-at-point))
   :config
+  (define-advice eglot-shutdown (:after (&rest r) disable-flymake-mode)
+    "Disable flymake-mode upon server shutdown."
+    (flymake-mode -1))
   (push 'company eglot-stay-out-of)
   (push '(java-mode . ("jdtls")) eglot-server-programs)
   (push '(c++-mode . ("clangd" "--background-index" "--compile-commands-dir=build"
