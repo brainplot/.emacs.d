@@ -21,6 +21,7 @@ Microsoft/CMake/CMake/share/cmake-3.15/editors/emacs"
          :map eglot-mode-map
          ("C-c f"    . eglot-format)
          ("C-c <f4>" . eglot-shutdown)
+         ("C-c x"    . eglot-code-actions)
          ("C-c h"    . eglot-help-at-point))
   :config
   (push 'company eglot-stay-out-of)
