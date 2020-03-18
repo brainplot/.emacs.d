@@ -49,6 +49,11 @@
 ;; Default frame settings
 (setq default-frame-alist '((font . "Hack-13")))
 
+;; Semantic mode options
+(setq semantic-default-submodes '(global-semanticdb-minor-mode
+                                  global-semantic-idle-scheduler-mode
+                                  global-semantic-show-parser-state-mode))
+
 ;; File associations
 (push '("\\.bash_aliases\\'" . shell-script-mode) auto-mode-alist)
 (push '("\\.pam_environment\\'" . conf-unix-mode) auto-mode-alist)
