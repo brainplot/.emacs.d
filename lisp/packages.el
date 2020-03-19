@@ -52,25 +52,42 @@ Microsoft/CMake/CMake/share/cmake-3.15/editors/emacs"
 
 (use-package company
   :demand
-  :bind (:map company-active-map
-              ("RET")
-              ("<return>")
-              ("M-p")
-              ("M-n")
-              ("C-p" . (lambda () (interactive) (company-complete-common-or-cycle -1)))
-              ("C-n" . (lambda () (interactive) (company-complete-common-or-cycle)))
-              ("<tab>" . company-complete-selection))
+  :init
+  (defun make-local-company-backends (value)
+    "Create a buffer-local copy of company-backends."
+    (set (make-local-variable 'company-backends) (append value company-backends)))
+
+  (defun set-company-backends-prog-mode ()
+    (make-local-company-backends '((company-capf :with company-yasnippet)
+                                   (company-semantic :with company-yasnippet)
+                                   (company-dabbrev-code company-keywords))))
+
+  (defun set-company-backends-cmake-mode ()
+    (make-local-company-backends '((company-cmake :with company-yasnippet))))
+
+  (defun set-company-backends-conf-mode ()
+    (make-local-company-backends '(company-dabbrev)))
+
+  :bind (("C-." . company-complete)
+         :map company-active-map
+         ("RET")
+         ("<return>")
+         ("M-p")
+         ("M-n")
+         ("C-p" . (lambda () (interactive) (company-complete-common-or-cycle -1)))
+         ("C-n" . (lambda () (interactive) (company-complete-common-or-cycle)))
+         ("<tab>" . company-complete-selection))
   :custom
+  (company-backends '(company-files))
   (company-dabbrev-downcase nil)
   (company-idle-delay 0.2)
   (company-minimum-prefix-length 2)
-  (company-backends '((company-capf :with company-yasnippet)
-                      (company-semantic :with company-yasnippet)
-                      (company-cmake :with company-yasnippet)
-                      (company-dabbrev-code company-keywords)
-                      company-dabbrev
-                      company-files))
-  :hook (after-init . global-company-mode))
+  (company-tooltip-align-annotations t)
+  :hook ((after-init . global-company-mode)
+         (prog-mode  . set-company-backends-prog-mode)
+         (cmake-mode . set-company-backends-cmake-mode)
+         (conf-mode  . set-company-backends-conf-mode)
+         (git-commit-mode . set-company-backends-conf-mode)))
 
 (use-package yasnippet
   :hook (prog-mode . yas-minor-mode)
