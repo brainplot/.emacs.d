@@ -33,8 +33,7 @@ Microsoft/CMake/CMake/share/cmake-3.15/editors/emacs"
                       "--header-insertion=never" "--pch-storage=memory" "-j=6"))
         eglot-server-programs))
 
-(use-package git-commit
-  :defer t)
+(use-package git-commit)
 
 (use-package gitignore-mode
   :mode ("\\.dockerignore\\'"))
