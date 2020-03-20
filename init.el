@@ -48,7 +48,7 @@
       ediff-window-setup-function 'ediff-setup-windows-plain)
 
 ;; Default frame settings
-(setq default-frame-alist '((font . "Hack-13")))
+(setq default-frame-alist '((font . "Hack-13") (width . 120) (height . 42)))
 
 ;; Semantic mode options
 (setq semantic-default-submodes '(global-semanticdb-minor-mode
