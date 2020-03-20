@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: replace font
+# key: replfont
+# --
+<match target="pattern">
+	<test qual="any" name="family"><string>${1:georgia}</string></test>
+	<edit name="family" mode="assign" binding="same"><string>${2:Ubuntu}</string></edit>
+</match>
