@@ -90,9 +90,7 @@ Microsoft/CMake/CMake/share/cmake-3.15/editors/emacs"
          (git-commit-mode . set-company-backends-conf-mode)))
 
 (use-package yasnippet
-  :hook (prog-mode . yas-minor-mode)
-  :config
-  (yas-reload-all))
+  :config (yas-global-mode))
 
 (use-package ivy
   :demand
