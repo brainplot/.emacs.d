@@ -7,7 +7,3 @@
 (add-hook 'after-init-hook #'log-emacs-init-time t)
 
 (add-hook 'compilation-filter-hook #'colorize-compilation-buffer)
-
-(add-hook 'prog-mode-hook #'set-up-prog-mode)
-
-(add-hook 'conf-mode-hook #'set-up-prog-mode)
