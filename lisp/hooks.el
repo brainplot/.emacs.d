@@ -1,6 +1,6 @@
 (add-hook 'before-save-hook #'clean-up-buffer)
 
-(let ((indent-spaces-list '(emacs-lisp sgml css js js-jsx)))
+(let ((indent-spaces-list '(emacs-lisp sgml css js js-jsx nxml)))
   (dolist (mode indent-spaces-list)
     (add-hook (intern (concat (symbol-name mode) "-mode-hook")) #'indent-with-spaces)))
 
