@@ -4,10 +4,7 @@
 
 (when (eq system-type 'windows-nt)
   (push
-   (expand-file-name
-    "Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/\
-Microsoft/CMake/CMake/share/cmake-3.15/editors/emacs"
-    (getenv "ProgramFiles(x86)"))
+   (expand-file-name "/Program Files/CMake/share/cmake-3.17/editors/emacs")
    load-path))
 
 (use-package rainbow-delimiters
