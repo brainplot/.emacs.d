@@ -197,18 +197,23 @@
   :commands diredfl-mode
   :hook (dired-mode . diredfl-mode))
 
-(use-package dired-sidebar
-  :bind ("<f8>" . dired-sidebar-toggle-sidebar)
-  :commands dired-sidebar-toggle-sidebar
+(use-package dired-toggle
   :init
-  (add-hook 'dired-sidebar-mode-hook
-            #'(lambda ()
-                (toggle-scroll-bar -1)
-                (unless (file-remote-p default-directory)
-                  (auto-revert-mode))))
-  :config
-  (push 'toggle-window-split dired-sidebar-toggle-hidden-commands)
-  (push 'rotate-windows dired-sidebar-toggle-hidden-commands))
+  (defun set-up-dired-toggle-mode ()
+    (interactive)
+    (visual-line-mode 1)
+    (setq-local visual-line-fringe-indicators '(nil right-curly-arrow))
+    (setq-local word-wrap nil))
+  :custom
+  (dired-toggle-window-size 32)
+  (dired-toggle-window-side 'left)
+  :bind (("<f8>" . #'dired-toggle)
+         :map dired-mode-map
+         ("q" . #'dired-toggle-quit)
+         ([remap dired-find-file] . #'dired-toggle-find-file)
+         ([remap dired-up-directory] . #'dired-toggle-up-directory)
+         ("C-c C-u" . #'dired-toggle-up-directory))
+  :hook (toggle-dired-mode . set-up-dired-toggle-mode))
 
 (use-package google-this
   :defer t
