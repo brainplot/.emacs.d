@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: v.crbegin(), v.crend()
+# key: crbegincrend
+# --
+${1:v}.crbegin(), $1.crend()

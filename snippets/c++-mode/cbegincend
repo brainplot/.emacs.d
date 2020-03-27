@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: v.cbegin(), v.cend()
+# key: cbegincend
+# --
+${1:v}.cbegin(), $1.cend()

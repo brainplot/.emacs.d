@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: v.rbegin(), v.rend()
+# key: rbeginrend
+# --
+${1:v}.rbegin(), $1.rend()

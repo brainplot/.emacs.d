@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: constructor
+# key: ct
+# --
+${1:Name}::$1(${2:args})${3: noexcept}
+${4: : ${5:init}}
+{
+		$0
+}

@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: Class Doxygen Doc
+# key: doxy_class
+# group: doxygen
+# --
+"""
+@brief      ${1:class description}
+
+@details    ${2:detailed description}
+"""
