@@ -219,25 +219,6 @@
   :defer t
   :config (google-this-mode 1))
 
-(use-package emms-setup
-  :demand
-  :if (eq system-type 'gnu/linux)
-  :custom
-  (emms-player-mpd-music-directory "~/Music")
-  (emms-player-mpd-server-name "localhost")
-  (emms-player-mpd-server-port "6600")
-  (emms-source-file-default-directory emms-player-mpd-music-directory)
-  (emms-volume-change-function 'emms-volume-mpd-change)
-  :bind (("<XF86AudioPlay>" . emms-pause)
-         ("<XF86AudioStop>" . emms-stop)
-         ("<XF86AudioPrev>" . emms-previous)
-         ("<XF86AudioNext>" . emms-next)
-         ("C-c C-." . emms-player-mpd-connect))
-  :config
-  (emms-all)
-  (push 'emms-info-mpd emms-info-functions)
-  (push 'emms-player-mpd emms-player-list))
-
 (use-package pkgbuild-mode
   :defer t)
 
