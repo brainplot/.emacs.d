@@ -215,10 +215,6 @@
          ("C-c C-u" . #'dired-toggle-up-directory))
   :hook (toggle-dired-mode . set-up-dired-toggle-mode))
 
-(use-package google-this
-  :defer t
-  :config (google-this-mode 1))
-
 (use-package pkgbuild-mode
   :defer t)
 
