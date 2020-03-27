@@ -55,12 +55,12 @@
     (set (make-local-variable 'company-backends) (append value company-backends)))
 
   (defun set-company-backends-prog-mode ()
-    (make-local-company-backends '((company-capf :with company-yasnippet)
-                                   (company-semantic :with company-yasnippet)
+    (make-local-company-backends '((company-capf company-yasnippet)
+                                   (company-semantic company-yasnippet)
                                    (company-dabbrev-code company-keywords))))
 
   (defun set-company-backends-cmake-mode ()
-    (make-local-company-backends '((company-cmake :with company-yasnippet))))
+    (make-local-company-backends '((company-cmake company-yasnippet))))
 
   (defun set-company-backends-conf-mode ()
     (make-local-company-backends '(company-dabbrev)))
