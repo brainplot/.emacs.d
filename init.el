@@ -17,7 +17,6 @@
 ;; General options
 (setq inhibit-startup-screen t
       require-final-newline t
-      save-silently t
       tab-always-indent 'complete)
 
 (setq-default display-line-numbers 'relative
