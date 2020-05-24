@@ -10,6 +10,9 @@
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
+(use-package smooth-scrolling
+  :config (smooth-scrolling-mode))
+
 (use-package modus-vivendi-theme
   :config (load-theme 'modus-vivendi t))
 
