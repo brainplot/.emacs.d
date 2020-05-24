@@ -7,11 +7,7 @@
         " - Emacs"))
 
 ;; Custom file
-(setq custom-file (expand-file-name
-                   (concat "custom-"
-                           (replace-regexp-in-string "\\W" "-" (symbol-name system-type) t)
-                           ".el")
-                   user-emacs-directory))
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file t t)
 
 ;; General options

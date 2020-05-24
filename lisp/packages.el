@@ -2,11 +2,6 @@
 (add-to-list 'package-archives '("melpa" . "https://stable.melpa.org/packages/") t)
 (package-initialize)
 
-(when (eq system-type 'windows-nt)
-  (push
-   (expand-file-name "/Program Files/CMake/share/cmake-3.17/editors/emacs")
-   load-path))
-
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
 
@@ -157,7 +152,6 @@
          ("\\.markdown\\'" . markdown-mode)))
 
 (use-package pinentry
-  :if (eq system-type 'gnu/linux)
   :config (pinentry-start))
 
 (use-package cmake-mode
