@@ -12,7 +12,7 @@
   (interactive "p")
   (end-of-line)
   (open-line arg)
-  (next-line 1)
+  (forward-line)
   (indent-according-to-mode))
 
 (defun clean-up-buffer ()
