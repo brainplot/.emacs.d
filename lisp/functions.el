@@ -17,7 +17,7 @@
 
 (defun clean-up-buffer ()
   "Perform some clean up operations in the current buffer."
-  (if (and (fboundp #'eglot-current-server) (eglot-current-server))
+  (if (and (fboundp #'eglot-managed-p) (eglot-managed-p))
       (eglot-format-buffer)
     (whitespace-cleanup)))
 
