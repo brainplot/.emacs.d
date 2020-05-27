@@ -6,6 +6,7 @@
   :hook (prog-mode . rainbow-delimiters-mode))
 
 (use-package smooth-scrolling
+  :custom (smooth-scroll-margin 4)
   :config (smooth-scrolling-mode))
 
 (use-package modus-vivendi-theme
