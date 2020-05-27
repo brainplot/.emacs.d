@@ -12,6 +12,7 @@
   :config (load-theme 'modus-vivendi t))
 
 (use-package eglot
+  :custom (eglot-put-doc-in-help-buffer t)
   :bind (("C-c l"    . eglot)
          :map eglot-mode-map
          ("C-c f"    . eglot-format)
