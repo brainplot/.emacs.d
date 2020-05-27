@@ -25,6 +25,7 @@
     (flymake-mode -1))
   (push 'company eglot-stay-out-of)
   (push '(java-mode . ("jdtls")) eglot-server-programs)
+  (push '(rust-mode . ("rust-analyzer")) eglot-server-programs)
   (push '(c++-mode . ("clangd" "--background-index" "--compile-commands-dir=build"
                       "--header-insertion=never" "--pch-storage=memory" "-j=6"))
         eglot-server-programs))
